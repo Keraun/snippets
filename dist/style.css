@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+
+    height: 0;
+
+    content: '\200B';
+}
+li {
+  list-style-type: none;
+}
+.list {
+  float: left;
+}
+.list li {
+  margin-bottom: 20px;
+  margin-right:30px;
+}
+
+.clearfix {
+    *zoom: 1;
+}/*IE/7/6*/
+.pull-left {
+    float: left;
+}
