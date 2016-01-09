@@ -225,7 +225,9 @@ textarea {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
+.margin-auto {
+  margin: 0 auto;
+}
 .btn {
   display: inline-block;
   cursor: pointer;

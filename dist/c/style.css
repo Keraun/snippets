@@ -1,4 +1,6 @@
-
+body {
+    background-color: #EDEBEB;
+}
 .main {
     width: 960px;
     margin: 0 auto;
@@ -37,11 +39,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width:260px;
-    height:20px;
-    color: white;
+
+    width: 260px;
+    height: 20px;
     margin-top: -10px;
     margin-left: -130px;
+
+    color: white;
 }
 /*wulingyang start
 ------------------------------*/
@@ -106,3 +110,12 @@
 }
 /*wulingyang end
 ------------------------------*/
+.tool-bar {
+    margin-bottom: 15px;
+}
+.tool-bar .search-box {
+    left: 50%;
+
+    width: 202px;
+    margin-left: -101px;
+}

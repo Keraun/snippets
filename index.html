@@ -23,13 +23,18 @@
       document.querySelector('body').appendChild(newNode);
     }
   </script>
-  <header>
-    <nav></nav>
-  </header>
-  <div class="main hide clearfix">
-    <div id="item-list">
-      <ul class="list" v-for="items in list" track-by="$index">
-        <li v-for="item in items">
+  <div id="item-list" class="main hide">
+    <div class="tool-bar">
+      <div class="ui icon input search-box">
+        <input type="text" v-model="search" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>  
+    </div>
+    {{search}}
+    <div class="ui horizontal divider">Demo</div>
+    <div class="clearfix">
+      <ul class="list" v-for="items in list " track-by="$index">
+        <li v-for="item in items | filterBy search in 'name' 'time' 'id' 'tag' 'des' ">
           <div class="ui card">
             <div class="blurring dimmable image">
               <div class="ui dimmer transition hidden">
@@ -59,9 +64,10 @@
   </div>
   <script type="text/javascript">
     var oPageConfig = {
+      search: '',
       list: [
         [
-          {imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/snippets/example/ajax-loading-demo',codeSrc:'https://github.com/iwuly/snippets/tree/master/example/ajax-loading-demo',name:'ajax-progress',time:'2015/03/01',tag:'ajax',des:'漂亮的ajax请求加载进度'}
+          {id:"001",imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/snippets/example/ajax-loading-demo',codeSrc:'https://github.com/iwuly/snippets/tree/master/example/ajax-loading-demo',name:'ajax-progress',time:'2015/03/01',tag:'ajax',des:'漂亮的ajax请求加载进度'}
         ]
       ]
     } 
@@ -74,6 +80,9 @@
         el: '#item-list',
         data: oPageConfig
       });
+      var strParam = window.location.search;
+      if(!!strParam)
+        vm.$data.search = strParam.substring(10);
       $('.main').removeClass('hide');
     }
   </script>
