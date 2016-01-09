@@ -23,124 +23,59 @@
       document.querySelector('body').appendChild(newNode);
     }
   </script>
+  <header>
+    <nav></nav>
+  </header>
   <div class="main hide clearfix">
-    <ul class="list">
-      <li>
-        <div class="ui card">
-          <div class="blurring dimmable image">
-            <div class="ui dimmer transition hidden">
-              <div class="content">
-                <div class="center">
-                  <div class="ui inverted button">查看演示</div>
+    <div id="item-list">
+      <ul class="list" v-for="items in list" track-by="$index">
+        <li v-for="item in items">
+          <div class="ui card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer transition hidden">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui inverted button">看演示</div>
+                    <div class="ui inverted button">看代码</div>
+                  </div>
                 </div>
               </div>
+              <img :src="item.imgSrc">
             </div>
-            <img src="images/default.jpg">
-          </div>
-          <div class="content">
-            <div class="header">demo</div>
-            <div class="meta">
-              <a class="group">描述</a>
-            </div>
-          </div>
-          <div class="extra content">
-            <a class="right floated created">2015/09/10</a>
-            <a class="friends"><i class="tag icon"></i> html </a>
-          </div>
-        </div> 
-      </li>
-
-    </ul>
-    <ul class="list">
-      <li>
-        <div class="ui card">
-          <div class="blurring dimmable image">
-            <div class="ui dimmer transition hidden">
-              <div class="content">
-                <div class="center">
-                  <div class="ui inverted button">查看演示</div>
-                </div>
+            <div class="content">
+              <div class="header">{{item.name}}</div>
+              <div class="meta">
+                <a class="group">{{item.des}}</a>
               </div>
             </div>
-            <img src="images/default.jpg">
-          </div>
-          <div class="content">
-            <div class="header">demo</div>
-            <div class="meta">
-              <a class="group">描述</a>
+            <div class="extra content">
+              <a class="right floated created">{{item.time}}</a>
+              <a class="friends"><i class="tag icon"></i> {{item.tag}}</a>
             </div>
-          </div>
-          <div class="extra content">
-            <a class="right floated created">2015/09/10</a>
-            <a class="friends"><i class="tag icon"></i> html </a>
-          </div>
-        </div> 
-      </li>
-
+          </div> 
+        </li>
     </ul>
-    <ul class="list">
-      <li>
-        <div class="ui card">
-          <div class="blurring dimmable image">
-            <div class="ui dimmer transition hidden">
-              <div class="content">
-                <div class="center">
-                  <div class="ui inverted button">查看演示</div>
-                </div>
-              </div>
-            </div>
-            <img src="images/default.jpg">
-          </div>
-          <div class="content">
-            <div class="header">demo</div>
-            <div class="meta">
-              <a class="group">描述</a>
-            </div>
-          </div>
-          <div class="extra content">
-            <a class="right floated created">2015/09/10</a>
-            <a class="friends"><i class="tag icon"></i> html </a>
-          </div>
-        </div> 
-      </li>
-    </ul>
-    <ul class="list">
-      <li>
-        <div class="ui card">
-          <div class="blurring dimmable image">
-            <div class="ui dimmer transition hidden">
-              <div class="content">
-                <div class="center">
-                  <div class="ui inverted button">查看演示</div>
-                </div>
-              </div>
-            </div>
-            <img src="images/default.jpg">
-          </div>
-          <div class="content">
-            <div class="header">demo</div>
-            <div class="meta">
-              <a class="group">描述</a>
-            </div>
-          </div>
-          <div class="extra content">
-            <a class="right floated created">2015/09/10</a>
-            <a class="friends"><i class="tag icon"></i> html </a>
-          </div>
-        </div> 
-      </li>
-    </ul>
+    </div>
   </div>
   <script type="text/javascript">
     var oPageConfig = {
-      list: {
-
-      }
+      list: [
+        [
+          {imgSrc:'images/default.jpg',name:'ajax-progress',time:'2015/03/01',tag:'ajax',des:'漂亮的ajax请求加载进度'}
+        ]
+      ]
     } 
   </script>
   <script type="text/javascript" src="dist/j/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="dist/j/vue.min.js"></script>
   <script type="text/javascript">
-    !isMob && $('.main').removeClass('hide');
+    if(!isMob) {
+      var vm = new Vue({
+        el: '#item-list',
+        data: oPageConfig
+      });
+      $('.main').removeClass('hide');
+    }
   </script>
   <script type="text/javascript" src="dist/j/semantic.min.js"></script>
   <script type="text/javascript">
