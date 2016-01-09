@@ -114,6 +114,7 @@ body {
     margin-bottom: 15px;
 }
 .tool-bar .search-box {
+    position: absolute;
     left: 50%;
 
     width: 202px;

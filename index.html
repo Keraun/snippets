@@ -24,13 +24,20 @@
     }
   </script>
   <div id="item-list" class="main hide">
-    <div class="tool-bar">
-      <div class="ui icon input search-box">
-        <input type="text" v-model="search" placeholder="Search...">
-        <i class="search icon"></i>
-      </div>  
+    <div class="tool-bar clearfix">
+      <a href="http://iwuly.com" class="ui left labeled icon button pull-left">
+        <i class="left arrow icon"></i> GoBlog 
+      </a>
+      <div class="search-box">
+        <div class="ui icon input">
+          <input type="text" v-model="search" placeholder="Search...">
+          <i class="search icon"></i>
+        </div>
+      </div>
+      <a href="http://github.com/iwuly" rel="nofollow" class="ui right labeled icon button pull-right">
+        <i class="right arrow icon"></i> GitHub 
+      </a>
     </div>
-    {{search}}
     <div class="ui horizontal divider">Demo</div>
     <div class="clearfix">
       <ul class="list" v-for="items in list " track-by="$index">
@@ -40,8 +47,8 @@
               <div class="ui dimmer transition hidden">
                 <div class="content">
                   <div class="center">
-                    <a :href="item.demoSrc" target="_blank"><div class="ui inverted button">看演示</div></a>
-                    <a :href="item.codeSrc" target="_blank"><div class="ui inverted button">看代码</div></a>
+                    <a :href="item.demoSrc" rel="nofollow"  target="_blank"><div class="ui inverted button">看演示</div></a>
+                    <a :href="item.codeSrc" rel="nofollow" target="_blank"><div class="ui inverted button">看代码</div></a>
                   </div>
                 </div>
               </div>
