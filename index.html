@@ -1,1 +1,91 @@
+<<<<<<< HEAD
 hello world
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>iwulyのworkspace</title>
+  <link rel="icon" href="images/default.png">
+  <link rel="stylesheet" type="text/css" href="dist/c/base.css">
+  <link rel="stylesheet" type="text/css" href="dist/c/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/c/style.css">
+</head>
+<body>
+  <script type="text/javascript">
+    var isMob = function () {
+      for(var e = navigator.userAgent.toLowerCase(), t = ["Android","iPhone","SymbianOS","Windows Phone","iPad","iPod"], n = !1, a = 0; a < t.length; a ++)
+      e.indexOf(t[a].toLowerCase()) > -1 && (n = !0);
+      return n;
+    }();
+    if(isMob) {
+      var newNode = document.createElement("div");
+      newNode['className'] = "tip"; 
+      newNode.innerHTML = '<div class="text">为了更好的体验,请打开电脑浏览本页面</div>'; 
+      document.querySelector('body').appendChild(newNode);
+    }
+  </script>
+  <header>
+    <nav></nav>
+  </header>
+  <div class="main hide clearfix">
+    <div id="item-list">
+      <ul class="list" v-for="items in list" track-by="$index">
+        <li v-for="item in items">
+          <div class="ui card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer transition hidden">
+                <div class="content">
+                  <div class="center">
+                    <a :href="item.demoSrc" target="_blank"><div class="ui inverted button">看演示</div></a>
+                    <a :href="item.codeSrc" target="_blank"><div class="ui inverted button">看代码</div></a>
+                  </div>
+                </div>
+              </div>
+              <img :src="item.imgSrc">
+            </div>
+            <div class="content">
+              <div class="header">{{item.name}}</div>
+              <div class="meta">
+                <a class="group">{{item.des}}</a>
+              </div>
+            </div>
+            <div class="extra content">
+              <a class="right floated created">{{item.time}}</a>
+              <a class="friends"><i class="tag icon"></i> {{item.tag}}</a>
+            </div>
+          </div> 
+        </li>
+    </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var oPageConfig = {
+      list: [
+        [
+          {imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/snippets/example/ajax-loading-demo',codeSrc:'https://github.com/iwuly/snippets.git',name:'ajax-progress',time:'2015/03/01',tag:'ajax',des:'漂亮的ajax请求加载进度'}
+        ]
+      ]
+    } 
+  </script>
+  <script type="text/javascript" src="dist/j/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="dist/j/vue.min.js"></script>
+  <script type="text/javascript">
+    if(!isMob) {
+      var vm = new Vue({
+        el: '#item-list',
+        data: oPageConfig
+      });
+      $('.main').removeClass('hide');
+    }
+  </script>
+  <script type="text/javascript" src="dist/j/semantic.min.js"></script>
+  <script type="text/javascript">
+    $('.card .image').dimmer({
+      on: 'hover'
+    });
+  </script>
+</body>
+</html>
+>>>>>>> gh-pages

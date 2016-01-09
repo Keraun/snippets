@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+html {
+  font-family: sans-serif;
+}
+html,
+body,
+header,
+section,
+footer,
+div,
+ul,
+ol,
+li,
+img,
+a,
+span,
+em,
+del,
+legend,
+center,
+strong,
+var,
+fieldset,
+form,
+label,
+dl,
+dt,
+dd,
+cite,
+input,
+hr,
+time,
+mark,
+code,
+figcaption,
+figure,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  /*color: rgb(50,50,50);*/
+}
+html,
+body {
+  /*background-color: #fff;*/
+  -webkit-user-select: none;
+
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+nav,
+article,
+aside,
+details,
+main,
+header,
+footer,
+section,
+fieldset,
+figcaption,
+figure {
+  display: block;
+}
+img,
+a,
+button,
+em,
+del,
+strong,
+var,
+label,
+cite,
+small,
+time,
+mark,
+code,
+textarea {
+  display: inline-block;
+}
+header,
+section,
+footer {
+  position: relative;
+}
+ol,
+ul {
+  list-style: none;
+}
+input,
+button,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*-webkit-appearance:none;*/
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1em;
+  line-height: 1em;
+}
+span {
+  display: inline-block;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+
+label,
+.wordWrap {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  content: ' ';
+}
+
+.loading_more {
+  display: block;
+  width: 100%;
+  height: 1.5em;
+}
+.loading_more:before {
+  background-image: url(../image/loading_more.gif) 30% center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+.loading_more:after {
+  content: '加载更多';
+}
+/*api.css End*/
+
+input,
+textarea {
+  outline: none;
+  -webkit-user-select: text;
+
+  -webkit-touch-callout: inherit;
+}
+
+/*common
+------------------------------*/
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.dv {
+  display: inline-block;
+  vertical-align: middle;
+}
+.di {
+  display: inline-block;
+}
+
+.text-hide {
+  border: 0;
+  background-color: transparent;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn:hover {
+  text-decoration: none;
+}
+
+.relative-wrap {
+  position: relative;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.ml0 {
+  margin-left: 0;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+
+.innerAll {
+  position: relative;
+  padding: 10px;
+}
+.innerLR {
+  position: relative;
+  padding: 0 10px;
+}
+.innerT {
+  position: relative;
+  padding-top: 10px;
+}
+.innerR {
+  position: relative;
+  padding-right: 10px;
+}
+.innerB {
+  position: relative;
+  padding-bottom: 10px;
+}
+.innerL {
+  position: relative;
+  padding-left: 10px;
+}
+/*common End*/
+
+/* scrollbar
+------------------------------*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  min-height: 30px;
+  border-radius: 100px;
+  background: rgba(0,0,0,.3);
+}
+::-webkit-scrollbar-track:vertical {
+  border-radius: 100px;
+  background: rgba(0, 0, 0,.2);
+}
+
+/*mask
+------------------------------*/
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
+}

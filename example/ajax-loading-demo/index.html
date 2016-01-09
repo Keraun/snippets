@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax loading demo</title>
+  <style>
+  * {margin:0;padding:0;}
+  #loader {
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    top: 0;
+    background-color: #50bcb6;
+    -webkit-transition: width .5s ease;
+    -moz-transition: width .5s ease;
+    transition: width .5s ease;
+    z-index:9999;
+  }
+  </style>
+</head>
+<body>
+  <div id="loader"></div>
+  <button id="ajax" style="margin-top:50px;">send</button>
+  <script type="text/javascript" src="./jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="./loader.js"></script>
+  <script type="text/javascript">
+
+    $('#ajax').on('click', function(e) {
+      $.ajax({
+        url:'data.php',
+        data: {id:'test'}
+      }).done(function(msg){
+        console.log(msg);
+      });
+    });
+  </script>
+</body>
+</html>
