@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
-  <title>iwulyのworkspace</title>
+  <title>iwulyのdeworkspace</title>
   <link rel="icon" href="images/default.png">
   <link rel="stylesheet" type="text/css" href="dist/c/base.css">
   <link rel="stylesheet" type="text/css" href="dist/c/semantic.min.css">
@@ -49,8 +49,36 @@
           </div>
         </div> 
       </li>
+
     </ul>
-        <ul class="list">
+    <ul class="list">
+      <li>
+        <div class="ui card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer transition hidden">
+              <div class="content">
+                <div class="center">
+                  <div class="ui inverted button">查看演示</div>
+                </div>
+              </div>
+            </div>
+            <img src="images/default.jpg">
+          </div>
+          <div class="content">
+            <div class="header">demo</div>
+            <div class="meta">
+              <a class="group">描述</a>
+            </div>
+          </div>
+          <div class="extra content">
+            <a class="right floated created">2015/09/10</a>
+            <a class="friends"><i class="tag icon"></i> html </a>
+          </div>
+        </div> 
+      </li>
+
+    </ul>
+    <ul class="list">
       <li>
         <div class="ui card">
           <div class="blurring dimmable image">
@@ -76,33 +104,7 @@
         </div> 
       </li>
     </ul>
-        <ul class="list">
-      <li>
-        <div class="ui card">
-          <div class="blurring dimmable image">
-            <div class="ui dimmer transition hidden">
-              <div class="content">
-                <div class="center">
-                  <div class="ui inverted button">查看演示</div>
-                </div>
-              </div>
-            </div>
-            <img src="images/default.jpg">
-          </div>
-          <div class="content">
-            <div class="header">demo</div>
-            <div class="meta">
-              <a class="group">描述</a>
-            </div>
-          </div>
-          <div class="extra content">
-            <a class="right floated created">2015/09/10</a>
-            <a class="friends"><i class="tag icon"></i> html </a>
-          </div>
-        </div> 
-      </li>
-    </ul>
-        <ul class="list">
+    <ul class="list">
       <li>
         <div class="ui card">
           <div class="blurring dimmable image">
@@ -129,13 +131,20 @@
       </li>
     </ul>
   </div>
+  <script type="text/javascript">
+    var oPageConfig = {
+      list: {
+
+      }
+    } 
+  </script>
   <script type="text/javascript" src="dist/j/jquery-2.1.1.min.js"></script>
   <script type="text/javascript">
     !isMob && $('.main').removeClass('hide');
   </script>
   <script type="text/javascript" src="dist/j/semantic.min.js"></script>
   <script type="text/javascript">
-  $('.card .image').dimmer({
+    $('.card .image').dimmer({
       on: 'hover'
     });
   </script>
