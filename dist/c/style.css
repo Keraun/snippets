@@ -120,3 +120,6 @@ body {
     width: 202px;
     margin-left: -101px;
 }
+.main {
+    display: none;
+}
