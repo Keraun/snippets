@@ -23,7 +23,7 @@
       document.querySelector('body').appendChild(newNode);
     }
   </script>
-  <div id="item-list" class="main hide">
+  <div id="item-list" class="main">
     <div class="tool-bar clearfix">
       <a href="http://iwuly.com" class="ui left labeled icon button pull-left">
         <i class="left arrow icon"></i> GoBlog 
@@ -52,7 +52,7 @@
                   </div>
                 </div>
               </div>
-              <img :src="item.imgSrc">
+              <img src="images/default.jpg" lazyLoadSrc="{{item.imgSrc}}" >
             </div>
             <div class="content">
               <div class="header">{{item.name}}</div>
@@ -81,6 +81,8 @@
   </script>
   <script type="text/javascript" src="dist/j/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="dist/j/vue.min.js"></script>
+  <script type="text/javascript" src="dist/j/lazyload.min.js"></script>
+  <script type="text/javascript" src="dist/j/semantic.min.js"></script>
   <script type="text/javascript">
     if(!isMob) {
       var vm = new Vue({
@@ -90,14 +92,18 @@
       var strParam = window.location.search;
       if(!!strParam)
         vm.$data.search = strParam.substring(10);
-      $('.main').removeClass('hide');
-    }
-  </script>
-  <script type="text/javascript" src="dist/j/semantic.min.js"></script>
-  <script type="text/javascript">
-    $('.card .image').dimmer({
-      on: 'hover'
+      
+      $(function(){
+        $("[lazyLoadSrc]").LazyLoad({
+          onShow: function () {
+          $('.card .image').dimmer({
+            on: 'hover'
+          });
+          $('.main').fadeIn();
+        }
+      });
     });
+    }
   </script>
 </body>
 </html>
