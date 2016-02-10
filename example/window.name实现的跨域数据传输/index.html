@@ -15,9 +15,10 @@
             var data = iframe.contentWindow.name;    // 读取数据
             alert(data);    //弹出'I was there!'
 
-              iframe.contentWindow.document.write('');
-              iframe.contentWindow.close();
-              document.body.removeChild(iframe);
+            // 成功后删除iframe
+            // iframe.contentWindow.document.write('');
+            // iframe.contentWindow.close();
+            // document.body.removeChild(iframe);
 
         } else if (state === 0) {
             state = 1;

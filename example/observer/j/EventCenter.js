@@ -28,6 +28,7 @@
     console.log(event);
     //函数传入参数
     console.log(arguments);
+
   });
 
 })(jQuery, window);

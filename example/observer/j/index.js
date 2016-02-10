@@ -19,11 +19,13 @@
       ui.$btn_pub.on('click', function() {
         var argument = ['param01','param02'];
         EventCenter.pub('/test/ls', argument);
+        alert('发布成功');
       });
 
       //点击取消订阅按钮(事件取消后,点击发布事件按钮失效)
       ui.$btn_unsub.on('click', function() {
         EventCenter.unsub('/test/ls');
+        alert('取消订阅,无法发布事件');
       });
 
     }
