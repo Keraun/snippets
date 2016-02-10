@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>接收消息iframe</title>
+</head>
+<body>
+<div id="message">
+  没有收到消息
+</div>
+<script type="text/javascript">
+  var $el = document.querySelector('#message');
+  var messageHandle = function (e) {
+    $el.innerHTML = '收到消息：' + e.data;
+  }
+
+  if(window.addEventListener) {
+    window.addEventListener('message',messageHandle,false);
+  }else if(window.attachEvent) {
+    window.attachEvent('onmessage',messageHandle);
+  }
+</script>
+</body>
+</html>
