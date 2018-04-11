@@ -18,15 +18,15 @@
     }();
     if(isMob) {
       var newNode = document.createElement("div");
-      newNode['className'] = "tip"; 
-      newNode.innerHTML = '<div class="text">为了更好的体验,请打开电脑浏览本页面</div>'; 
+      newNode['className'] = "tip";
+      newNode.innerHTML = '<div class="text">为了更好的体验,请打开电脑浏览本页面</div>';
       document.querySelector('body').appendChild(newNode);
     }
   </script>
   <div id="item-list" class="main">
     <div class="tool-bar clearfix">
-      <a href="http://iwuly.com" class="ui left labeled icon button pull-left">
-        <i class="left arrow icon"></i> GoBlog 
+      <a href="//keraun.cn" class="ui left labeled icon button pull-left">
+        <i class="left arrow icon"></i> GoBlog
       </a>
       <div class="search-box">
         <div class="ui icon input">
@@ -34,8 +34,8 @@
           <i class="search icon"></i>
         </div>
       </div>
-      <a href="http://github.com/iwuly" rel="nofollow" class="ui right labeled icon button pull-right">
-        <i class="right arrow icon"></i> GitHub 
+      <a href="http://github.com/keraun" rel="nofollow" class="ui right labeled icon button pull-right">
+        <i class="right arrow icon"></i> GitHub
       </a>
     </div>
     <div class="ui horizontal divider">Demo</div>
@@ -64,7 +64,7 @@
               <a class="right floated created">{{item.time}}</a>
               <a class="friends"><i class="tag icon"></i> {{item.tag}}</a>
             </div>
-          </div> 
+          </div>
         </li>
     </ul>
     </div>
@@ -74,21 +74,21 @@
       search: '',
       list: [
         [
-          {id:"001",imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/snippets/example/ajax-loading-demo',codeSrc:'https://github.com/iwuly/snippets/tree/master/example/ajax-loading-demo',name:'ajax-progress',time:'2015/03/01',tag:'ajax',des:'漂亮的ajax请求加载进度'},
-          {id:"005",imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/xiaomi',codeSrc:'https://github.com/iwuly/xiaomi',name:'仿小米官网',time:'2016/02/16',tag:'作品,作业',des:'练习做业－仿小米官网'}
+          {id:"001",imgSrc:'images/default.jpg',demoSrc:'http://keraun.github.io/snippets/example/ajax-loading-demo',codeSrc:'https://github.com/iwuly/snippets/tree/master/example/ajax-loading-demo',name:'ajax-progress',time:'2015/03/01',tag:'ajax',des:'漂亮的ajax请求加载进度'},
+          {id:"005",imgSrc:'images/default.jpg',demoSrc:'http://keraun.github.io/xiaomi',codeSrc:'https://github.com/iwuly/xiaomi',name:'仿小米官网',time:'2016/02/16',tag:'作品,作业',des:'练习做业－仿小米官网'}
         ],
         [
-          {id:"002",imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/snippets/example/observer',codeSrc:'https://github.com/iwuly/snippets/blob/gh-pages/example/observer/j/EventCenter.js',name:'观察者模式',time:'2015/09/18',tag:'观察者模式',des:'观察者,发布订阅者模式'},
-          {id:"006",imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/game-center',codeSrc:'https://github.com/iwuly/game-center',name:'移动端布局练习',time:'2016/02/16',tag:'作品,作业',des:'练习做业－移动端布局练习'}
+          {id:"002",imgSrc:'images/default.jpg',demoSrc:'http://keraun.github.io/snippets/example/observer',codeSrc:'https://github.com/iwuly/snippets/blob/gh-pages/example/observer/j/EventCenter.js',name:'观察者模式',time:'2015/09/18',tag:'观察者模式',des:'观察者,发布订阅者模式'},
+          {id:"006",imgSrc:'images/default.jpg',demoSrc:'http://keraun.github.io/game-center',codeSrc:'https://github.com/iwuly/game-center',name:'移动端布局练习',time:'2016/02/16',tag:'作品,作业',des:'练习做业－移动端布局练习'}
         ],
         [
-          {id:"003",imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/snippets/example/window.name实现的跨域数据传输',codeSrc:'https://github.com/iwuly/snippets/blob/gh-pages/example/window.name实现的跨域数据传输',name:'window.name跨域数据传输',time:'2016/01/20',tag:'iframe',des:'web通信,跨文档传输,iframe'}
+          {id:"003",imgSrc:'images/default.jpg',demoSrc:'http://keraun.github.io/snippets/example/window.name实现的跨域数据传输',codeSrc:'https://github.com/iwuly/snippets/blob/gh-pages/example/window.name实现的跨域数据传输',name:'window.name跨域数据传输',time:'2016/01/20',tag:'iframe',des:'web通信,跨文档传输,iframe'}
         ],
         [
-          {id:"004",imgSrc:'images/default.jpg',demoSrc:'http://iwuly.com/snippets/example/postMessage跨文档实现方案',codeSrc:'https://github.com/iwuly/snippets/blob/gh-pages/example//postMessage跨文档实现方案/',name:'postMessage跨文档实现方案',time:'2016/01/20',tag:'postMessage',des:'postMessage,web通信,跨文档传输'}
+          {id:"004",imgSrc:'images/default.jpg',demoSrc:'http://keraun.github.io/snippets/example/postMessage跨文档实现方案',codeSrc:'https://github.com/iwuly/snippets/blob/gh-pages/example//postMessage跨文档实现方案/',name:'postMessage跨文档实现方案',time:'2016/01/20',tag:'postMessage',des:'postMessage,web通信,跨文档传输'}
         ]
       ]
-    } 
+    }
   </script>
   <script type="text/javascript" src="dist/j/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="dist/j/vue.min.js"></script>
@@ -103,7 +103,7 @@
       var strParam = window.location.search;
       if(!!strParam)
         vm.$data.search = strParam.substring(10);
-      
+
       $(function(){
         $("[lazyLoadSrc]").LazyLoad({
           onShow: function () {
